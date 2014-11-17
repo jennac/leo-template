@@ -552,7 +552,7 @@
              else
                 e.style.display = 'initial';
         }
-d    </script>
+    </script>
     </div><!--footer-->
 
   </body>
