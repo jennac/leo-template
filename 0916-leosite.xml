@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version="2" class="v2" expr:dir="data:blog.languageDirection" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+  <head>
+    <b:if cond="data:blog.isMobile">
+      <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport"/>
+      <b:else/>
+      <meta content="width=1100" name="viewport"/>
+    </b:if>
+    <b:include data="blog" name="all-head-content"/>
+    <title><data:blog.pageTitle/></title>
+    
+    <b:skin><![CDATA[/*
+    Local Election Office Website Template
+    Designed by: ELECTricity Team (http://electionbuzz.org/)
+    */
+    /* Sticky Footer
+    -------------------------- */
+    html, body {
+        height: 100%;
+    }
+    .wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+     }
+     .footer, .push {
+	height: 155px; /* .push must be the same height as .footer */
+    }
+    .footer {
+        background-color:  #65c6bb;
+    }
+    /* General
+    -------------------------- */
+    body {
+        font-family: $(body.font);
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        color: $(link.hover.color);
+    }
+    /* Header 
+    -------------------------- */
+    div.header-wrapper {
+        background-color: #65c6bb;
+        min-height: 200px;
+    }
+    div.banner-wrapper {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 630px;
+        margin: 0 auto;
+    }
+    div.header-text {
+        padding-left: 3em;
+        margin: 0 auto;
+        width: 450px;
+    }
+    #header h1 {
+        color: #fff;
+        font-family: avenir-black, sans-serif;
+        font-size: 250%;
+    }
+    #header h2 {
+       color: #000;
+       font-family: bitter, serif;
+       font-size: 130%; /* 90% for long text, 130% for
+    shorter text */
+    }
+    #header img {
+        width: 145px;
+	height: 145px;
+        float: left;
+        padding-right: 30px;
+    }
+    /* Nav-Bar
+    -------------------------- */
+    div.nav-wrapper {
+        background-color: #2c3e50;
+        margin-top: -30px; /* negates autogen header widget
+    margin-bottom */
+        padding: 0;
+        text-align: center;
+    }
+    div.widget-content {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    ul.nav-links a {
+        color: #fff;
+        font-family: avenir-black, sans-serif;
+        font-size: 100%;
+    }
+    ul.nav-links a:hover {
+        color: #ea6157;
+    }
+    ul.nav-links li {
+        display: inline;
+        padding-right: 2.5em;
+        text-align: center;
+    }
+    #google_translate_element {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        float: right;
+    }
+    /* Lang-Bar
+    -------------------------- */
+    div.lang-wrapper {
+        background-color: #ea6157;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul.lang-links a {
+        color: #000;
+        font-family: bitter, serif;
+        font-style: italic;
+        font-size: 90%;
+    }
+    ul.lang-links a:hover {
+        font-style: normal;
+    }
+    ul.lang-links li  {
+        display: inline;
+        padding-right: 2.5em;
+        text-align: center;
+    }
+    /* Static Posts
+    -------------------------- */
+    element.style {
+        margin: 0;
+        padding: 0;
+    }
+    div.static-post {
+        margin: 0 auto;
+        margin-bottom: 0px;
+        width: 630px;
+    }
+    div.static-post img {
+        width: 40px;
+        height: 40px;
+        padding-left: 1.5em;
+        padding-top: .3em;
+        padding-bottom: .3em;
+        padding-right: .3em;
+        vertical-align: middle;
+    }
+    div.static-post a {
+        text-decoration: none;
+        color: #ea6157;
+    }
+    div.static-post a:hover {
+        color: #ea6157;
+    }
+    div.static-post h2[style] {
+        margin-bottom: 0em !important;
+        line-height: 1em !important;
+        padding-bottom: .3em;
+    }
+    div.static-post h2 {
+        background-color: #2c3e50;
+        color: #fff;
+        font-family: avenir-black, sans-serif;
+        font-size: 175%;
+        padding-right: 2em;
+        float: left;
+        clear: left;
+        -webkit-box-decoration-break: clone;
+    }
+    div.static-post h3[style] {
+        margin-bottom: .2em !important;
+        line-height: 0 !important;
+    }
+    div.static-post h3 {
+        color: #65c6bb;
+        font-family: avenir-black, sans-serif;
+        font-size: 175%;
+        margin-top: 1em;
+        float: left;
+        clear: left;
+        -webkit-box-decoration-break: clone;
+    }
+    div.static-post h3 a {
+        color: #65c6bb;
+    }
+    div.static-post h4 {
+        font-family: avenir-medium, sans-serif;
+        font-weight: normal;
+        font-size: 175%;
+        padding-left: 3.5em;
+        float: left;
+        clear: left;
+    }
+    div.static-post h4 a {
+        color: #000;
+    }
+    div.static-post {
+        font-family: avenir-book, sans-serif;
+    }
+     /* Main Posts
+    -------------------------- */
+    div.main-post {
+        margin: 0 auto;
+        margin-bottom: 0px;
+        width: 630px;
+    }
+    div.main-post img {
+        width: 40px;
+        height: 40px;
+        padding-left: 1.5em;
+        padding-top: .3em;
+        padding-bottom: .3em;
+        padding-right: .3em;
+        vertical-align: middle;
+    }
+    div.main-post ul {
+        list-style-type: none;
+    }
+    div.main-post li {
+        padding-bottom: 2em;
+    }
+    div.main-post a {
+        text-decoration: none;
+        font-family: avenir-black, sans-serif;
+        font-size: 175%;
+        font-weight: bold;
+        color: #2c3e50;
+        vertical-align: bottom; 
+        padding-left: 1em;
+    }
+    div.widget ul[style]{
+        line-height: 0 !important;
+    }
+    div.main-post a:hover {
+        color: #ea6157;
+    }
+    /* Map-Bar
+    -------------------------- */
+    div.map-wrapper {
+        background-color: #65c6bb;
+        margin: 0 auto;
+        padding: 0;
+        width: 630px;
+    }
+    ul.map-links a {
+        color: #fff;
+        font-family: avenir-heavy, sans-serif;
+        font-size: 90%;
+    }
+    ul.map-links {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      margin: 0 auto;
+      list-style-type: none;
+      -webkit-margin-before: 0 !important;
+      -webkit-margin-after: 0 !important;
+    }
+    ul.map-links li  {
+       display: block;
+       padding-bottom: 10px;
+       padding-top: 10px;
+    }
+    ul.map-links a:hover {
+       color: #ea6157;
+    }
+    /* Footer
+    -------------------------- */
+    div.footer-wrapper {
+        background-color: #65c6bb;
+        margin-top: 40px;
+    }
+    div.footer-content {
+        margin: 0 auto;
+        width: 630px;
+    }
+    div.contact-info {
+        font-family: bitter, serif;
+        font-size: 90%;
+    }
+    div.widget-content[style] {
+        font-family: bitter, serif !important;
+        font-size: 10% !important;
+    }
+    div.widget-content[style] a{
+        text-decoration: none !important;
+    }
+    /* Misc
+    -------------------------- */
+    #navbar-iframe {
+        display: none !important;
+    }
+    .show-sm {
+        display: none;
+    }
+    /* Mobile
+    -------------------------- */
+    @media only screen and (max-width: 480px) {
+        div.header-wrapper {
+             height: 10%;
+        }
+        div.banner-wrapper {
+             width: 90%;
+        }
+        div.header-text {
+            width: 90%;
+            padding-left: 0em !important;
+        }
+        #header img {
+             display: none !important;
+        }
+        #google_translate_element {
+             float: none;
+             margin: 0 auto;
+        }
+        div.main-post, div.static-post {
+             width: 90%;
+             padding-top: 1.5em;
+        }
+        div.main-post img {
+             float: left;
+        }
+        div.main-post a {
+            padding-left: 0em;
+        }
+        div.static-post h2[style], div.static-post h2 span {
+            padding-top: .3em !important;
+            padding-left: .5em !important;
+        }
+        div.static-post h3[style] {
+             clear: none !important;
+             float: none !important;
+             margin-bottom: 0em !important;
+             margin-right: 0em !important;
+             text-align: left !important;
+             line-height: 1.4em !important;
+        }
+        div.static-post img {
+             display: none;
+        }
+        div.footer-content {
+             width: 90%;
+        }
+        .show-sm {
+             display: initial;
+             padding-top: 5px;
+             padding-bottom: 5px;
+        }
+        img.show-sm {
+             height: 30px;
+             width: 109px;
+             marginL 0 auto;
+        }
+        ul.map-links {
+             -webkit-column-count: 2;
+             -moz-column-count: 2;
+             column-count: 2;
+             margin: 0;
+             list-style-type: none;
+             -webkit-margin-before: 0 !important;
+             -webkit-margin-after: 0 !important;
+        }
+        ul.nav-links li {
+             padding: 0;
+        }
+        ul.nav-links a {
+             display: block;
+             padding-top: 12px;
+             padding-bottom: 12px;
+             padding-right: 0;
+             padding-left: 0;
+        }
+
+        .hide-sm {
+             display: none;
+        }
+        /*
+        iframe {
+             display: none;
+        }
+        */
+    }
+    ]]></b:skin>
+    
+  </head>
+  
+  <body>
+    <div class="wrapper">
+    <div class="header-wrapper">
+      <b:section id="header" class="header" maxwidget="1" shadowelement="no">
+	<b:widget id="Header1" class="header" locked="true" title="Test_LEO (Header)" type="Header">
+          <b:includable id="main">
+             <b:if cond="data:useImage">
+              <div class="banner-wrapper">
+	      <a expr:href="data:blog.homepageUrl" style="display: block">
+		<img expr:alt="data:title" expr:height="data:height"
+    expr:id="data:widget.instanceId + &quot;_headerimg&quot;"
+    expr:src="data:sourceUrl" expr:width="data:width" style="display:
+    inline"/>
+	      <div class="header-text">
+		<h1><data:title/></h1>
+		<h2><data:description/></h2>
+	      </div>
+              </a>
+	      </div><!--end banner-wrapper div-->
+	      <b:else/>
+	      <div class="banner-wrapper">
+              <a expr:href="data:blog.homepageUrl" style="display:
+    block">
+		<h1><data:title/></h1>
+	        <h2><data:description/></h2>
+		</a>
+	      </div><!--end banner-wrapper div-->
+	    </b:if>
+	  </b:includable>
+	</b:widget>
+      </b:section><!--end header section-->
+    </div><!--end header-wrapper div -->
+
+    <div class="nav-wrapper">
+      <b:section id="nav-links" class="nav-links" shadowelement="no">
+          <b:widget id="LinkList1" class="widget LinkList"
+      locked="true" mobile="yes" title="Navigation Links" type="LinkList">
+              <b:includable id="main">
+                  <div class='widget-content'>
+		    <img src="https://dl.dropboxusercontent.com/u/148494127/LEO_Icons/menu.png" class="show-sm"
+      onclick="toggle_visibility('dropdown-menu');"/>
+		    <ul class="nav-links hide-sm" id="dropdown-menu">
+		      <b:loop values='data:links' var='link'>
+		        <li><a expr:href='data:link.target'><data:link.name/></a></li>
+		      </b:loop>
+		    </ul>
+		    <b:include name='quickedit'/>
+		  </div>
+              </b:includable>
+          </b:widget><!--end nav-links widget-->
+      </b:section><!--end nav-links section-->
+    </div><!--end nav-wrapper-->
+
+    <div class="lang-wrapper">
+      <b:section id="lang-links" class="lang-links"
+      shadowelement="no">
+        <b:widget id='Translate1' locked='false' mobile="yes" title='Translate' type='Translate'>
+           <b:includable id='main'>
+             <b:if cond='data:title != &quot;&quot;'>
+              <!--<h2 class='title'><data:title/></h2>-->
+             </b:if>
+           <div id='google_translate_element'/>
+           <script>
+	     function googleTranslateElementInit() {
+	     new google.translate.TranslateElement({
+	     pageLanguage: &#39;<data:pageLanguage/>&#39;,
+	     autoDisplay: &#39;true&#39;,
+	     layout: google.translate.TranslateElement.InlineLayout.<data:layout/>
+	     }, &#39;google_translate_element&#39;);
+	     }
+	     </script>
+	     <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'/>
+	     <b:include name='quickedit'/>
+	   </b:includable>
+	</b:widget>
+	<b:widget id="LinkList2" class="widget LinkList" locked="true"
+      mobile="yes" title="Languages" type="LinkList"> 
+  	  <b:includable id="main">
+             <div class="widget-content">
+	       <ul class="lang-links">
+		 <b:loop values='data:links' var='link'>
+		 <li><a expr:href='data:link.target'><data:link.name/></a></li>
+		 </b:loop>
+	       </ul>
+	       <b:include name='quickedit'/>
+	     </div>
+	   </b:includable>
+          </b:widget><!--end lang-links widget-->
+      </b:section><!--end lang-links section-->
+    </div><!--end lang-wrapper-->		  
+    
+    <b:section id="blog" class="blog posts" maxwidget="1" shadowelement="no"> 
+      <b:widget id="Blog1" locked="False" title="Page Content" type="Blog">
+        <b:includable id="main" var="top">
+          <b:if cond="data:blog.pageType == &quot;static_page&quot;">
+            <div class="static-post">
+             <b:loop values="data:posts" var="post">
+	      <data:post.body/>
+              <b:include data="post" name="comment_picker"/>
+	      </b:loop>
+	    </div><!-- end static-post div-->
+	  <b:else/>
+	    <div class="main-post">
+		<b:loop values="data:posts" var="post">
+		  <data:post.body/>
+	        </b:loop>
+	    </div><!-- end main-post div-->
+          </b:if>
+        </b:includable>
+      </b:widget><!--end Blog widget-->
+    </b:section><!-- end blog posts div-->
+    <div class="push"></div>
+    </div><!--wrapper-->
+  
+    <div class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-content">
+       <div class="map-wrapper">
+       <b:section id="map-links" class="map-links" shadowelement="no">
+         <b:widget id="LinkList3" class="widget LinkList"
+    locked="true" mobile="yes" title="Site Map" type="LinkList"> 
+  	  <b:includable id="main">
+             <div class="widget-content">
+	       <ul class="map-links">
+		 <b:loop values='data:links' var='link'>
+		 <li><a expr:href='data:link.target'><data:link.name/></a></li>
+		 </b:loop>
+	       </ul>
+	       <b:include name='quickedit'/>
+	     </div><!--widget content-->
+	   </b:includable>
+          </b:widget>
+      </b:section><!--map-links-->
+      </div><!--map-wrapper-->
+
+      <b:section id="footer" shadowelement="no">
+        <b:widget id="Text1" class="widget Text" locked="true" mobile="yes" title="Contact" type="Text">
+          <b:includable id="main">
+            <div class="contact-info">
+	      <data:content/>
+	      <b:include name='quickedit'/>
+            </div><!--contact info-->
+	  </b:includable>
+        </b:widget>
+        <b:widget id="Attribution1" locked="true" title="Blogger Attribution" type="attribution">
+          <b:includable id="main">
+	     <b:if cond='data:attribution != &quot;&quot;'>
+	      <div class="attr">
+      	        <data:attribution/>
+	      </div><!--attr-->
+	     </b:if>
+	 </b:includable>
+        </b:widget>
+      </b:section>
+     </div><!--footer content-->
+    </div><!--footer-wrapper-->
+     <script>
+        function toggle_visibility(id) {
+             var e = document.getElementById(id);
+             if(e.style.display == 'initial')
+                e.style.display = 'none';
+             else
+                e.style.display = 'initial';
+        }
+d    </script>
+    </div><!--footer-->
+
+  </body>
+  
+</html>
